@@ -155,22 +155,6 @@ async def query_document(query: Dict[str, str]):
         question = query.get("text", "").strip()
         if not question:
             raise HTTPException(status_code=400, detail="Query text is required")
-         # Process specific question types
-        # Process specific question types
-        if "what is this pdf" in question.lower():
-            return {"response": "This is the 2024 Global Report on Food Crises, which analyzes global food insecurity and malnutrition."}
-            
-        if "list major food insecurity reason" in question.lower():
-            return {"response": "According to the 2024 Global Report, the major reasons for food insecurity in 2024 are:\n1. Conflict (affecting 135 million people in 20 countries)\n2. Extreme weather events (affecting 77 million people in 18 countries)\n3. Economic shocks (affecting 75 million people in 21 countries)\n4. The ongoing impacts of COVID-19"}
-            
-        if "malnutrition in war zones" in question.lower():
-            return {"response": "According to the report, children living in conflict zones are more than twice as likely to suffer from malnutrition than children in peaceful areas. Key points:\n- Over 60% of people most at risk from hunger live in conflict zones\n- 10 of the world's 13 worst food crises are driven by conflict\n- In conflict areas, there's limited access to nutritious food, safe water, and healthcare\n- Humanitarian aid delivery is often disrupted by violence"}
-
-        if "malnutrition in war zones" in question.lower():
-            return {"response": "According to the report, children living in conflict zones are more than twice as likely to suffer from malnutrition than children in peaceful areas. Key points:\n- Over 60% of people most at risk from hunger live in conflict zones\n- 10 of the world's 13 worst food crises are driven by conflict\n- In conflict areas, there's limited access to nutritious food, safe water, and healthcare\n- Humanitarian aid delivery is often disrupted by violence"}
-        
-        if "malnutrition in war zones" in question.lower():
-            return {"response": "According to the report, children living in conflict zones are more than twice as likely to suffer from malnutrition than children in peaceful areas. Key points:\n- Over 60% of people most at risk from hunger live in conflict zones\n- 10 of the world's 13 worst food crises are driven by conflict\n- In conflict areas, there's limited access to nutritious food, safe water, and healthcare\n- Humanitarian aid delivery is often disrupted by violence"}
 
 
         # Get relevant documents
